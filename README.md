@@ -25,6 +25,7 @@ Zastosowanie przedziału [0,1] × [0,1] zamiast [-1,1] × [-1,1] nie zmienia ist
 Dodatkowo, w implementacji wykorzystuję wielowątkowość, co pozwala na podział obliczeń na wiele rdzeni procesora, przyspieszając proces obliczeń.
 
 3. Implementacja algorytmu
+
 A) Ustalamy liczbę losowanych punktów N
 
 B) Generujemy losowe współrzędne (x, y) w przedziale [0, R] x [0, R]. 
@@ -33,7 +34,9 @@ C) Sprawdzamy, ile z tych punktów mieści się wewnątrz ćwiartki koła (czy s
 
 D)  Obliczamy przybliżenie liczby 𝜋 π na podstawie stosunku punktów wewnątrz ćwiartki koła do wszystkich wygenerowanych punktów: 
 
+
 ![image](https://github.com/user-attachments/assets/bf4b2cd8-e6e3-47a2-9839-19ca0321e8d0)
+
 ​ 
 E) Wersja wielowątkowa:
 Aby przyspieszyć obliczenia, używam wielowątkowości, co pozwala na równoczesne losowanie punktów i sprawdzanie ich pozycji w wielu wątkach. Każdy wątek wykonuje część iteracji, a wyniki są sumowane na końcu.
@@ -48,5 +51,6 @@ B) Większa liczba wątków może przyspieszyć obliczenia, ale nie wpływa na d
  
  - Duża liczba iteracji:
    ![image](https://github.com/user-attachments/assets/fa9208c1-87db-46fa-8fdb-083574c8eaa5)
+   
 
 C) Użycie ćwiartki koła (zamiast pełnego okręgu) nie zmienia metody.
