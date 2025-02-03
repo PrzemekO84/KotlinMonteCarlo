@@ -46,13 +46,13 @@ A) Większa liczba iteracji zwiększa dokładność wyniku.
 B) Większa liczba wątków może przyspieszyć obliczenia, ale nie wpływa na dokładność wyniku (Świetnie pokazują to wyniki gdzie program wykona się szybciej przy małej liczbie iteracji w wersji bez wątków natomiast przy bardzo dużej ilości iteracji program wykona się znacznie szybciej podczas użycia metody wielowątkowej).
 
  - Mała liczba iteracji:
- - 
+
   ![image](https://github.com/user-attachments/assets/69cdc6a5-006f-4afa-a5fb-bfaad8574404)
 
  
  - Duża liczba iteracji:
- - 
-   ![image](https://github.com/user-attachments/assets/fa9208c1-87db-46fa-8fdb-083574c8eaa5)
-   
 
+   ![image](https://github.com/user-attachments/assets/fa9208c1-87db-46fa-8fdb-083574c8eaa5)
+
+   
 C) Użycie ćwiartki koła (zamiast pełnego okręgu) nie zmienia metody.
