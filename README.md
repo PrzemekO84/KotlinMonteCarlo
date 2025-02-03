@@ -10,7 +10,9 @@ Dodatkowo w implementacji wykorzystałem wielowątkowość, aby przyspieszyć ob
 W klasycznej wersji tej metody punkty losuje się w przedziale [-1, 1] x [-1, 1], a następnie sprawdza, czy dany punkt znajduje się wewnątrz koła o promieniu 1. W moim przypadku zdecydowałem się na inny przedział losowania współrzędnych. Punkty są losowane w zakresie [0,1] × [0,1], czyli tylko w jednej ćwiartce układu współrzędnych.
 
 Wówczas równanie okręgu o środku w punkcie (0,0) i promieniu 1 przyjmuje postać:
-x^2 + y^2 ≤ R^2 ![image](https://github.com/user-attachments/assets/d103b0fb-8ca4-4b5b-ada0-2f6c41680917)
+x^2 + y^2 ≤ R^2
+
+![image](https://github.com/user-attachments/assets/d103b0fb-8ca4-4b5b-ada0-2f6c41680917)
 
 Jeśli dany punkt spełnia to równanie, oznacza to, że znajduje się wewnątrz ćwiartki koła.
 
@@ -42,6 +44,7 @@ B) Większa liczba wątków może przyspieszyć obliczenia, ale nie wpływa na d
 
  - Mała liczba iteracji:
   ![image](https://github.com/user-attachments/assets/69cdc6a5-006f-4afa-a5fb-bfaad8574404)
+
  
  - Duża liczba iteracji:
    ![image](https://github.com/user-attachments/assets/fa9208c1-87db-46fa-8fdb-083574c8eaa5)
