@@ -1,4 +1,5 @@
 1. Wprowadzenie
+   
 Do wyznaczania liczby 𝜋 wybrałem metodę Monte Carlo, ponieważ podobało mi się jej założenie wyznaczania tej wartości poprzez użycie prawdopodobieństwa. Metoda Monte Carlo w kontekście wyznaczania liczby 𝜋
 opiera się na losowym rozmieszczaniu punktów w kwadracie i obliczaniu stosunku punktów, które wpadają do wpisanego w ten kwadrat koła.
 
@@ -7,6 +8,7 @@ opiera się na losowym rozmieszczaniu punktów w kwadracie i obliczaniu stosunku
 Dodatkowo w implementacji wykorzystałem wielowątkowość, aby przyspieszyć obliczenia.
 
 2. Opis metody
+   
 W klasycznej wersji tej metody punkty losuje się w przedziale [-1, 1] x [-1, 1], a następnie sprawdza, czy dany punkt znajduje się wewnątrz koła o promieniu 1. W moim przypadku zdecydowałem się na inny przedział losowania współrzędnych. Punkty są losowane w zakresie [0,1] × [0,1], czyli tylko w jednej ćwiartce układu współrzędnych.
 
 Wówczas równanie okręgu o środku w punkcie (0,0) i promieniu 1 przyjmuje postać:
@@ -42,7 +44,9 @@ E) Wersja wielowątkowa:
 Aby przyspieszyć obliczenia, używam wielowątkowości, co pozwala na równoczesne losowanie punktów i sprawdzanie ich pozycji w wielu wątkach. Każdy wątek wykonuje część iteracji, a wyniki są sumowane na końcu.
 
 4. Podsumowanie
+   
 A) Większa liczba iteracji zwiększa dokładność wyniku.
+
 B) Większa liczba wątków może przyspieszyć obliczenia, ale nie wpływa na dokładność wyniku (Świetnie pokazują to wyniki gdzie program wykona się szybciej przy małej liczbie iteracji w wersji bez wątków natomiast przy bardzo dużej ilości iteracji program wykona się znacznie szybciej podczas użycia metody wielowątkowej).
 
  - Mała liczba iteracji:
